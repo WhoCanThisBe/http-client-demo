@@ -7,18 +7,6 @@
     <groupId>no.kristiania.httpClient</groupId>
     <artifactId>http-client-demo</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>11</source>
-                    <target>11</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -27,6 +15,23 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
+
+    <build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.22.2</version>
+        </plugin>
+    </plugins>
+    </build>
+
 
 
 
